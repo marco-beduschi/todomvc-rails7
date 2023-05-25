@@ -68,6 +68,7 @@ group :development do
   gem 'error_highlight', '>= 0.4.0', platforms: [:ruby]
 
   gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :test do
