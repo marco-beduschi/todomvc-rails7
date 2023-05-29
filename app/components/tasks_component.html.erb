@@ -1,0 +1,6 @@
+<div>
+  <%= render(NewTaskComponent.new(task: Task.new)) %>
+  <ul class="flex flex-col gap-2">
+    <%= render(TaskComponent.with_collection(@tasks)) %>
+  </ul>
+</div>

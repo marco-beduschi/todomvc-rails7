@@ -1,0 +1,6 @@
+<li>
+  <div class="flex gap-2 items-center">
+    <%= check_box_tag(Task.human_attribute_name(:completed), @task.completed, disabled: true) %>
+    <p><%= @task.description %></p>
+  </div>
+</li>
