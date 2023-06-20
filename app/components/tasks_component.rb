@@ -4,5 +4,4 @@ class TasksComponent < ViewComponent::Base
   def initialize(tasks:)
     @tasks = tasks
   end
-
 end

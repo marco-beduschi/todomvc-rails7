@@ -1,10 +1,10 @@
-<%= form_with model: @task do |f| %>
+<%= form_with model: @task, class: "w-full" do |f| %>
   <%= f.hidden_field :completed, value: false %>
-  <div>
+  <div class="w-full">
     <%= f.label :description, class: 'sr-only' do %>
       Task description
     <% end %>
-    <%= f.text_field :description, autofocus: true, placeholder: 'What needs to be done?' %>
+    <%= f.text_field :description, autofocus: true, placeholder: 'What needs to be done?', class: "w-full rounded" %>
   </div>
   <%= f.submit(class: 'hidden') %>
 <% end %>

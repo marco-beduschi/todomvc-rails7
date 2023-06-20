@@ -1,6 +1,24 @@
-<li>
+<%= tag.li(
+  id: dom_id(@task),
+  class: "first-of-type:border-none border-t border-pink-100 py-2"
+) do %>
   <div class="flex gap-2 items-center">
-    <%= check_box_tag(Task.human_attribute_name(:completed), @task.completed, disabled: true) %>
+    <%= form_with(
+      model: @task,
+      data: {
+        controller: "autosubmit-form"
+      }
+    ) do |form| %>
+      <%= form.check_box(
+        :completed,
+        class: "rounded",
+        "aria-label": "Mark as complete",
+        data: {
+          action: "autosubmit-form#submit"
+        }
+      ) %>
+      <%= form.submit(class: "hidden", data: {autosubmit_form_target: "submit"}) %>
+    <% end %>
     <p><%= @task.description %></p>
   </div>
-</li>
+<% end %>

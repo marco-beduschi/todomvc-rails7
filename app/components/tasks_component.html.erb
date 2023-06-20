@@ -1,6 +1,9 @@
-<div>
-  <%= render(NewTaskComponent.new(task: Task.new)) %>
-  <ul class="flex flex-col gap-2">
-    <%= render(TaskComponent.with_collection(@tasks)) %>
-  </ul>
-</div>
+<section class="flex flex-col items-center w-full">
+  <h1 class="font-light text-5xl text-pink-300 leading-loose">todos</h1>
+  <div class="bg-white h-fit p-2 w-full max-w-sm rounded shadow-md lg:shadow-xl">
+    <%= render(NewTaskComponent.new(task: Task.new)) %>
+    <ul class="flex flex-col">
+      <%= render(TaskComponent.with_collection(@tasks)) %>
+    </ul>
+  </div>
+</section>

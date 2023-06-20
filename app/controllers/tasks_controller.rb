@@ -18,4 +18,20 @@ class TasksController < ApplicationController
       render(NewTaskComponent.new(task:), content_type: 'text/html')
     end
   end
+
+  def update
+    task = Task.find(params[:id])
+    task.update(params.require(:task).permit(:completed, :description))
+
+    respond_to do |format|
+      format.turbo_stream do
+        render(
+          turbo_stream: turbo_stream.replace(
+            helpers.dom_id(task),
+            TaskComponent.new(task:)
+          )
+        )
+      end
+    end
+  end
 end
