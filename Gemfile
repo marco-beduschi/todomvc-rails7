@@ -74,6 +74,10 @@ group :development do
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+
+  # Rerun tests when files change
+  gem 'guard'
+  gem 'guard-minitest'
 end
 
 group :test do
