@@ -54,6 +54,10 @@ gem 'bootsnap', require: false
 # Ruby on Rails. [https://viewcomponent.org/]
 gem 'view_component'
 
+# Styling a SVG document with CSS for use on the web is most reliably achieved by
+# adding classes to the document and embedding it inline in the HTML.
+gem 'inline_svg'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
