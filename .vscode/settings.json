@@ -1,3 +1,6 @@
 {
-  "ruby.rubocop.executePath": "/Users/nuuvem/.rvm/gems/ruby-3.2.0/wrappers/"
+  "ruby.rubocop.executePath": "/Users/nuuvem/.rvm/gems/ruby-3.2.0/wrappers/",
+  "tailwindCSS.includeLanguages": {
+    "erb": "html.erb"
+  }
 }
