@@ -1,0 +1,8 @@
+<li>
+  <%= link_to(path, class: "flex gap-1 items-center p-2") do %>
+    <% if local_assigns[:icon].present? %>
+      <%= inline_svg_tag(icon, size: "16px*16px") %>
+    <% end %>
+    <%= title %>
+  <% end %>
+</li>
